@@ -5,11 +5,14 @@
 <body>
 <iframe id="CAST"></iframe>
 <script>
-const DISPLAY = document.getElementById('CAST');
-DISPLAY.src = "Genesis.pdf";
-DISPLAY.addEventListener('load', function() {
-console.log("CS14");
-});
+async function CAST_C14_BOOK(C14_BOOK) {
+const CAST_CS14_BOOK = await fetch(C14_BOOK, { method: "HEAD" });
+return "CAST";
+}
+let CS14_BOOK;
+CS14_BOOK = "CAST/VECTORS/Genesis.pdf";
+const CAST_CS_VECTOR = await CAST_C14_BOOK(CS14_BOOK);
+CAST.src = CAST_CS_VECTOR;
 </script>
 </body>
 </html>
